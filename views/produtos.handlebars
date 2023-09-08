@@ -1,0 +1,18 @@
+<main class="mainP">
+<h1 class="titlePag">Produtos Cadastrados</h1>
+<div class="productCont">
+    {{#each produtoR}}
+    <figure class="product">
+    <div class="titleProduct"> {{this.titulo}}</div>
+    <div class="desc"> {{this.descricao}}</div>
+
+    <div class="catpri"><p> {{this.categoria}}</p> <p>R${{this.preco}}</p> </div>
+    <label for="" class="buttons">
+    <a class="detail btn">Ver Detalhes</a>
+    <a class="edit btn">Editar</a>
+    <a href="/produtos/delete/{{this.id}}"  class="delete btn">Excluir</a>
+    </label>
+    </figure>
+    {{/each}}
+</div>
+</main>
